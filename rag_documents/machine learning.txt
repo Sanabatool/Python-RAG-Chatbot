@@ -1,0 +1,2373 @@
+﻿🧠 WEEK 1 - INTRODUCTION TO MACHINE LEARNING
+1. 🤖 WHAT IS MACHINE LEARNING?
+Machine Learning is teaching a computer to learn patterns from data so that it can make predictions or decisions without being explicitly programmed for every individual case.
+ML allows computers to learn from data and past experience and improve performance. 
+🧠 The BIG idea
+7. 🔄 TRADITIONAL PROGRAMMING vs MACHINE LEARNING
+Traditional Programming
+👨‍💻 PROGRAM(Human writes rules)+ 📊 DATA
+             │
+             ▼
+          💻 COMPUTER
+             │
+             ▼
+          🎯 OUTPUT
+Example:
+def add(a, b):
+    return a + b
+You explicitly tell the computer what to do.
+Machine Learning
+📊 TRAINING DATA + 🎯 CORRECT OUTPUT(Answers)
+              │
+              ▼
+             🤖 ML
+              ↓
+       Learns patterns
+
+              │
+              ▼
+          🧠 MODEL
+              │
+              ▼
+         NEW DATA
+              │
+              ▼
+         🔮 PREDICTION
+🧠 MEMORY TRICK
+Traditional: PROGRAM(RULES) + DATA → OUTPUT
+ML: DATA + OUTPUT → MODEL/ RULES
+2. 🍕 REAL-LIFE EXAMPLE - SPAM EMAIL
+Traditional programming: You might manually write:
+if "free money" in email:  spam = True
+But spammers can write:
+FREE MONEY!!! Or  F.R.E.E M.O.N.E.Y
+You have won a prize!
+Congratulations...
+Your rules become huge.
+Instead, ML can learn from thousands of examples:
+Email                     Label
+────────────────────────────────
+"Win free money!"         Spam
+"Meeting at 3 PM"         Not Spam
+"Claim your prize!"      Spam
+"Assignment attached"    Not Spam
+The model learns patterns. Then:
+New email
+   ↓
+🤖 Model
+   ↓
+Spam probability = 97%
+   ↓
+🚨 SPAM
+
+3. 🎯 WHAT IS THE PURPOSE OF ML?
+ML is extracting knowledge from data and building systems that can make predictions/decisions based on data. 
+Think of ML as:
+DATA
+ ↓
+🔍 Find patterns
+ ↓
+🧠 Learn
+ ↓
+🔮 Predict
+ ↓
+🎯 Make decisions
+
+4. 👨‍🔬 ARTHUR SAMUEL - 
+Arthur Samuel (1959) as an important historical definition:
+Machine Learning gives computers the ability to learn without being explicitly programmed.
+🧠 Memory trick: SAMUEL = 1959 = LEARN WITHOUT EXPLICIT PROGRAMMING
+5. 👨‍🔬 TOM MITCHELL 
+Tom Mitchell (1998) defines ML using: P, T, E​ 
+where:
+* T = Task 
+* P = Performance 
+* E = Experience 
+Your slide states that a learning task is described using <P, T, E>. 
+🧒 Think about a handwriting-recognition system
+You want a computer to recognize handwritten digits.
+       HANDWRITTEN DIGIT
+               ↓
+             🤖 ML
+               ↓
+             "7"
+T = Task
+What does the machine have to do? Recognize handwritten digits.
+P = Performance
+How do we know it is doing well?  Accuracy.
+E = Experience
+What does it learn from? Previous handwritten examples.
+🧠 MEMORY TRICK
+Ask yourself: What? How well? From what?
+T → What should it do?
+P → How well did it do?
+E → What did it learn from?
+
+6. ✍️ HANDWRITING RECOGNITION EXAMPLE
+Task T: ?
+Performance P: ?
+Training Experience E: ?
+Answer:
+ComponentAnswerT - TaskRecognize/classify handwritten charactersP - PerformanceRecognition/classification accuracyE - ExperienceDataset of handwritten labeled examples
+8. 🤔 WHEN SHOULD WE USE MACHINE LEARNING?
+Your slide gives some very interesting cases. 
+1️⃣ Human expertise doesn't exist
+Example: 🚀 Navigating on Mars. Humans cannot manually write rules for every possible situation.
+2️⃣ Humans can't explain their expertise
+Example: 🗣️ Speech recognition. Humans can recognize speech, but explaining every tiny rule for every sound is extremely difficult.
+3️⃣ Models must be customized
+Example: 🏥 Personalized medicine. Different patients may require different predictions.
+4️⃣ Huge amounts of data
+Example: 🧬 Genomics. The dataset can be too large and complex for humans to analyze manually.
+🧠 MEMORY
+NO EXPERT + HARD TO EXPLAIN + PERSONALIZED + HUGE DATA
+When these appear → think: 🤖 MACHINE LEARNING
+
+9. 🌍 WHY IS MACHINE LEARNING IMPORTANT?
+ML's use in healthcare, finance, e-commerce, intelligent decision systems, data analysis, and research. 
+And there's an important reason:
+📊 DATA IS EXPLODING
+Every day:
+📱 Phones
+💻 Computers
+🌐 Websites
+🏥 Hospitals
+🏦 Banks
+🚗 Cars
+📷 Cameras
+generate enormous amounts of data. Humans cannot manually inspect all of it.
+Therefore:
+Huge Data
+   ↓
+🤖 Machine Learning
+   ↓
+Patterns + Predictions
+   ↓
+Useful Decisions
+Your slide specifically connects ML with growing data generation, fraud detection, security threats, personalization and recommendations. 
+10. 🔍 WHAT TASKS ARE GOOD FOR ML?
+The slide groups important ML tasks into four categories. rgrp
+👁️ 1. Recognizing Patterns
+Examples:
+* Face recognition 
+* Facial expressions 
+* Handwriting 
+* Speech 
+* Medical images 
+Image → 🤖 → "Cancer"
+🎨 2. Generating Patterns
+Examples:
+* Images 
+* Motion sequences 
+Prompt → 🤖 → 🖼️ New Image
+🚨 3. Recognizing Anomalies
+Anomaly = something unusual.
+Example:
+Normal:
+$10
+$20
+$15
+$25
+
+Suddenly:
+$50,000 🚨
+ML can flag suspicious transactions , i-e unusual credit-card transactions and unusual sensor readings. 
+🔮 4. Prediction
+Examples:
+* Stock prices 
+* Currency exchange rates 
+Past data
+   ↓
+🤖 ML
+   ↓
+Future prediction
+🧠 MEMORY TRICK
+Say: "ML Recognizes, Generates, catches Anomalies, and Predicts."
+
+11. 🌎 APPLICATIONS OF ML
+ApplicationML task👤 Face recognitionClassification🚗 Self-driving carsPrediction/decision🗣️ Virtual assistantsSpeech/NLP🚦 Traffic predictionPrediction🎤 Speech recognitionPattern recognition💳 Fraud detectionAnomaly detection📧 Spam filteringClassification🛒 Product recommendationPrediction/recommendation🏥 HealthcareDiagnosis/prediction🔧 Predictive maintenancePrediction🛍️ E-commerceRecommendation/prediction12. 🚀 STATE-OF-THE-ART APPLICATIONS
+Your Week 1 slides also show examples such as:
+* Autonomous cars 
+* Scene labeling using deep learning 
+* Inference from deep-learned models 
+* Automatic speech recognition 
+Understand the message: ML is not just theory; it powers modern intelligent systems.
+
+
+13. ⚠️ LIMITATIONS OF MACHINE LEARNING
+This is important because ML isn't magic, four limitations. Bdtr  rabidt
+1️⃣ Bias potential
+Bad or biased data can produce biased predictions.
+Bad data
+ ↓
+Bad learning
+ ↓
+Bad prediction
+2️⃣ Data acquisition
+You need enough good-quality data.
+3️⃣ Technical expertise
+ML requires knowledge of:
+* mathematics 
+* statistics 
+* programming 
+* data 
+* algorithms 
+4️⃣ Resource intensive
+Training some models can require:
+* powerful GPUs 
+* memory 
+* storage 
+* time 
+* electricity 
+
+14. 📚 COMMON ML TERMINOLOGY
+🧠 MODEL
+A model is the learned mathematical representation of a real-world process. A mathematical representation built using the learning algorithm and training data.
+Think:
+Training Data
+     ↓
+Learning Algorithm
+     ↓
+🧠 MODEL
+🔑 MEMORY MODEL = LEARNED KNOWLEDGE
+15. 📌 FEATURE
+A feature is a measurable property/characteristic of your data. 
+Suppose predicting house price.
+🏠 House
+
+Size       = 2000 sq ft
+Bedrooms   = 3
+Bathrooms  = 2
+Age        = 5 years
+Location   = Karachi
+These are features.
+🧠 MEMORY FEATURE = CLUE 🔎
+A feature gives the model information.
+16. 🧩 FEATURE VECTOR
+A feature vector is a collection of numerical features used as input to the ML model. 
+Example: House:
+Size       = 2000
+Bedrooms   = 3
+Bathrooms  = 2
+Age        = 5
+Feature vector: X = [2000, 3, 2, 5] 
+🧠 MEMORY
+FEATURE = ONE CLUE
+FEATURE VECTOR = MANY CLUES TOGETHER
+17. 🏋️ TRAINING
+Training means giving the algorithm data so it can find patterns and build the model. 
+Training Data
+     ↓
+🤖 Algorithm
+     ↓
+Find patterns
+     ↓
+🧠 Learn
+     ↓
+MODEL
+18. 🔮 PREDICTION
+After the model has been trained:
+New Input
+   ↓
+🧠 Trained Model
+   ↓
+Prediction
+Prediction is feeding input into the ready model to obtain a predicted output. 
+19. 🎯 TARGET / LABEL
+The value the model is trying to predict is called: Target / Label
+Example:
+Study Hours = 5
+Attendance = 90%
+Previous Score = 75
+
+       ↓
+
+Pass = YES
+Here: Features:
+Study Hours
+Attendance
+Previous Score
+
+Target: PASS
+1. 🎯 Ground Truth
+Ground truth = the correct answer.
+Imagine I show you a picture:
+      📸
+    🐱
+I tell you: "This is a CAT." That "CAT" is the ground truth.
+In ML:
+Image → 🐱
+          ↑
+     Ground Truth
+       = "Cat"
+It is what we believe is the actual/correct answer for the data. The ground truth is usually established using trusted information such as expert labeling or confirmed outcomes.
+2. 🧹 Data Curation
+This sounds complicated, but the idea is simple. Data curation involves making the dataset more useful and organized.
+Data curation = preparing your data so it is useful and good quality.
+Some images might be:
+* blurry 
+* corrupted 
+* duplicates 
+* incorrectly labeled 
+* irrelevant 
+* extremely poor quality
+3. 🔄 Data Augmentation
+Data augmentation = creating slightly changed versions of existing data.
+Suppose you only have this image: 🐱 We can create variations:
+Original 🐱
+      ↓
+ ┌──┼──────┬──────┐
+ ↓  ↓      ↓        ↓
+🔄 Rotate   Zoom  ↔️ Flip
+Now we have more training examples.
+4. 📚 Training Dataset
+Training data = the examples the model learns from.
+💻 ML example Suppose:
+Training data:
+
+Image       Label
+------------------
+🐱           Cat
+🐶           Dog
+🐱           Cat
+🐶           Dog
+The algorithm uses these examples to learn patterns.
+Training Data
+     ↓
+🤖 Learning Algorithm
+     ↓
+🧠 Model
+5. 📝 Validation Dataset
+Validation data = practice exam. You learned from your training examples.
+Now the teacher gives you different questions to see: "Is the student learning properly?"
+That's validation.
+Training
+   ↓
+Learn
+   ↓
+Validation
+   ↓
+Check / Adjust
+🤖 Why does ML need validation?
+Suppose you train a model: Training accuracy = 99%
+But maybe the model simply memorized the training examples.
+Validation data helps you see whether the model performs well on data it didn't train directly on.
+6. 🎓 Test Dataset
+Test data = final exam.
+After you've trained and tuned your model, you give it data it hasn't seen before.
+📚 Training
+    ↓
+Learn
+    ↓
+📝 Validation
+    ↓
+Adjust/tune
+    ↓
+🎓 Test
+    ↓
+Final Performance
+The test set gives an estimate of how the final model performs on unseen data.
+
+ML DatasetStudent equivalentPurpose📚 TrainingStudying textbook/examplesLearn📝 ValidationPractice examCheck & improve🎓 TestFinal examFinal evaluation🧠 SUPER MEMORY TRICK TRAIN → PRACTICE → TEST
+Fine-tuning = taking an already trained ML/AI model and training it a little more on specific data so it becomes better at a particular task.
+20. 🧠 THE FOUR TYPES OF MACHINE LEARNING
+🟢 1. SUPERVISED LEARNING
+👶 Six-year-old explanation
+Imagine a teacher gives you:
+🍎 → Apple
+🍌 → Banana
+🍊 → Orange
+You have: DATA + CORRECT ANSWERS You learn from the teacher.
+That's supervised learning. learning from labeled training data where desired outputs are provided. 
+Flow
+📊 Input + 🏷️ Correct Label
+             ↓
+            🤖
+             ↓
+        Learn Pattern
+             ↓
+           🧠 Model
+             ↓
+        New Input
+             ↓
+          Prediction
+Example Spam detection:
+Email                  Label
+────────────────────────────
+"Win money!"           Spam
+"Meeting tomorrow"     Not Spam
+"Free prize!"          Spam
+Then:
+New email
+ ↓
+🤖
+ ↓
+Spam
+🧠 MEMORY SUPERVISED = TEACHER 👩‍🏫
+Teacher gives answers.
+21. 🟢 TWO TYPES OF SUPERVISED LEARNING
+🏷️ CLASSIFICATION
+Output is a category/class.
+
+Examples:
+Email → Spam / Not Spam
+Image → Cat / Dog
+Student → Pass / Fail
+INPUT
+ ↓
+🤖
+ ↓
+CATEGORY
+🔢 REGRESSION
+Output is a number.
+
+Examples:
+House → Rs. 20 million
+Temperature → 32°C
+Salary → Rs. 150,000
+🧠 MEMORY
+CLASSIFICATION = CLASS 🏷️ REGRESSION = REAL NUMBER 🔢
+🏆 Classification vs Regression
+ClassificationRegressionOutputCategoryNumberExampleSpam/not spamHouse priceOutput typeDiscreteContinuousQuestion"Which class?""How much?"Common Methods of supervised learning
+MethodPurposeExampleLinear RegressionPredict numerical valuesPredict house priceLogistic RegressionClassificationSpam email detectionDecision TreeClassification & predictionStudent pass/fail predictionRandom ForestImproved decision treesDisease predictionSupport Vector Machine (SVM)ClassificationFace recognitionK-Nearest Neighbor (KNN)Compare nearby data pointsMovie recommendationNaive BayesProbability-based classificationSentiment analysisNeural NetworksComplex pattern learningImage recognitionExample Suppose we train a model using:
+* Input: Student study hours 
+* Output: Exam marks 
+The model learns the relationship and predicts marks for new students.
+22. 🔵 UNSUPERVISED LEARNING
+Now remove the teacher. You give the computer:
+🍎 🍎 🍌 🍌 🍊 🍊
+but don't tell it: "This is an apple."
+The machine tries to discover structure itself.
+unsupervised learning as using training data without desired outputs/labels. 
+Flow
+📊 DATA
+(no labels)
+   ↓
+🤖 Algorithm
+   ↓
+🔍 Find hidden patterns
+   ↓
+📦 Groups / Structure
+Example: Customer grouping
+Suppose a shop has customers:
+Customer A → spends 500
+Customer B → spends 520
+Customer C → spends 10,000
+Customer D → spends 11,000
+The algorithm might discover:
+GROUP 1
+Low spending customers
+
+GROUP 2
+High spending customers
+You didn't tell it the groups.
+🧠 MEMORY
+UNSUPERVISED = NO TEACHER 🙈
+No labels.
+23. 🔵 TYPES OF UNSUPERVISED LEARNING
+📦 Clustering
+Group similar things.
+
+The algorithm discovers the groups.
+Example: Customer segmentation.
+📉 Dimensionality Reduction
+Suppose you have: 100 features
+You reduce them to: 10 important dimensions while trying to preserve useful information.
+
+Example: Visualization of high-dimensional data.
+🧠 MEMORY
+CLUSTER = GROUP  DIMENSIONALITY REDUCTION = COMPRESS
+Common Methods
+MethodPurposeExampleK-Means ClusteringGroup similar dataCustomer segmentationHierarchical ClusteringBuild clusters in levelsGene analysisDBSCANDensity-based clusteringFraud detectionPrincipal Component Analysis (PCA)Reduce dimensionsImage compressionAssociation Rule LearningFind relationshipsMarket basket analysisAutoencodersFeature learningNoise removal from imagesExample
+An online shopping website groups customers into:
+* Budget buyers 
+* Luxury buyers 
+* Frequent shoppers 
+No labels are given; the algorithm discovers groups automatically
+24. 🟡 SEMI-SUPERVISED LEARNING
+This is the middle child. 😄
+You have:
+1000 data points
+
+950 ❌ No labels
+50   ✅ Labels
+semi-supervised learning as having training data plus a few desired outputs. 
+🧒 Real-life example
+Imagine your teacher has: 1000 pictures
+but only labels: 50 pictures
+The algorithm can use the small labeled set plus the large unlabeled set.
+🧠 MEMORY
+SEMI = SOME ANSWERS
+Not all.
+25. 🔴 REINFORCEMENT LEARNING
+Imagine teaching a puppy 🐶.
+Puppy sits
+   ↓
+🍖 Reward!
+
+Puppy bites furniture
+   ↓
+❌ Penalty
+Eventually it learns which actions are good. That's reinforcement learning.
+An agent learning by interacting with its environment and receiving rewards for correct actions and penalties for incorrect ones. 
+RL FLOW
+
+             🌍 ENVIRONMENT
+                   │
+                   ▼
+                🤖 AGENT
+                   │
+                ACTION
+                   │
+                   ▼
+             🌍 ENVIRONMENT
+                   │
+          ┌────────┴────────┐
+          ▼                 ▼
+       🟢 REWARD         🔴 PENALTY
+          │                 │
+          └────────┬────────┘
+                   ▼
+             LEARN BETTER
+Example: Self-driving car
+🚗 Car
+ ↓
+Observe road
+ ↓
+Action: turn left
+ ↓
+Safe?
+ ↓
+🟢 Reward
+
+Dangerous?
+ ↓
+🔴 Penalty
+Common Methods
+MethodPurposeExampleQ-LearningLearn best actionsGame playing AIDeep Q Network (DQN)Deep learning + RLAtari gamesSARSALearn from current actionsRobot navigationPolicy GradientLearn action strategiesSelf-driving carsActor-CriticCombine value + policy learningAdvanced roboticsMonte Carlo MethodsLearn from complete episodesChess AIExample
+A robot learns to walk:
+* Correct movement → Reward 
+* Falling down → Penalty 
+Over time, it learns the best walking strategy.
+🧠 MEMORY
+REINFORCEMENT = REWARD 🎁
+Think: "Try → Get reward/penalty → Learn → Try again."
+🏆 ALL FOUR TYPES - MASTER TABLE
+LearningLabels?Main ideaExampleMemory🟢 Supervised✅ YesLearn from answersSpam detection👩‍🏫 Teacher🔵 Unsupervised❌ NoFind hidden patternsCustomer groups🙈 No teacher🟡 Semi-supervised🟡 FewSome labeled + lots unlabeledImage classification🌓 Some answers🔴 ReinforcementLabels aren't given like supervisedRewards/penaltiesRobot/car🎁 RewardEasy Real-Life Analogy
+Learning TypeReal-Life ExampleSupervisedTeacher gives questions with answersUnsupervisedStudent finds patterns aloneReinforcementLearning by trial and error in a game🧠 THE BEST MEMORY TRICK
+Imagine four classrooms:
+👩‍🏫 SUPERVISED
+Teacher gives answers
+        ↓
+      LABELS
+
+🙈 UNSUPERVISED
+No teacher
+        ↓
+  FIND GROUPS
+
+🌓 SEMI-SUPERVISED
+Teacher gives SOME answers
+        ↓
+  FEW LABELS
+
+🎮 REINFORCEMENT
+No answer sheet
+        ↓
+ REWARD / PENALTY
+Say this:
+Supervised = Teacher
+Unsupervised = Discover
+Semi = Some labels
+Reinforcement = Reward
+
+26. 🧠 SUPERVISED LEARNING MATHEMATICAL IDEA
+Your slide introduces: Y = f(X) 
+X = Input
+ ↓
+f = Learned relationship
+ ↓
+Y = Output
+Example:
+X = Study hours
+f = Learned relationship
+Y = Exam score
+The ML goal is to approximate the mapping well enough that new inputs can produce useful predictions. 
+💻 Python example
+Here's a tiny supervised-learning example:
+from sklearn.linear_model import LinearRegression
+
+X = [[1], [2], [3], [4], [5]]
+y = [20, 40, 60, 80, 100]
+
+model = LinearRegression()
+
+model.fit(X, y)
+
+prediction = model.predict([[6]])
+
+print(prediction)
+Conceptually:
+Training:
+
+X       y
+1  →   20
+2  →   40
+3  →   60
+4  →   80
+5  →  100
+
+       ↓
+
+     🤖 ML
+
+       ↓
+
+     Model
+
+       ↓
+
+     X = 6
+
+       ↓
+
+Prediction ≈ 120
+That's supervised learning because the model was given the correct y values during training.
+
+27. 🧠 WEEK 1 MASTER MIND MAP
+                         🤖 MACHINE LEARNING
+                                  │
+              ┌───────────────────┼───────────────────┐
+              │                   │                   │
+              ▼                   ▼                   ▼
+          DEFINITION          PURPOSE             APPLICATIONS
+              │                   │                   │
+        Learn from data       Patterns            Healthcare
+        & experience          Predictions         Finance
+        Improve performance   Decisions           E-commerce
+              │
+              ▼
+        👨‍🔬 DEFINITIONS
+              │
+        ┌─────┴─────┐
+        ▼           ▼
+   Samuel 1959   Mitchell 1998
+   Learn without    P-T-E
+   explicit coding
+              │
+              ▼
+       🧩 TERMINOLOGY
+              │
+       ┌──────┼────────┬──────────┐
+       ▼      ▼        ▼          ▼
+     Model Feature  Training  Target/Label
+              │
+              ▼
+       🧠 LEARNING TYPES
+              │
+   ┌──────────┼───────────┬──────────────┐
+   ▼          ▼           ▼              ▼
+Supervised  Unsupervised Semi        Reinforcement
+   │           │           │              │
+   ├─Class.    ├─Cluster   └─Few labels   └─Reward
+   └─Regr.     └─Dim.Red.
+
+🚨 15 THINGS I WANT YOU TO REMEMBER 
+⭐ 1 Machine Learning = learning patterns from data.
+⭐ 2
+Traditional programming: Program + Data → Output
+⭐ 3
+ML: Data + Output → Model
+⭐ 4
+Arthur Samuel: 1959 -> Samuel's key idea: Computers learn without being explicitly programmed.
+⭐ 5
+Tom Mitchell: P,T,E​  T = Task P = Performance E = Experience
+⭐ 10
+Feature = one measurable property.
+⭐ 11
+Feature vector = collection of features.
+⭐ 12
+Target/label = thing we want to predict.
+⭐ 13
+Supervised = labeled data. Unsupervised = unlabeled data. Reinforcement = reward/penalty.
+
+⏱️ 5-MINUTE REVISION SHEET
+If your exam starts in 5 minutes, read only this:
+                 🤖 MACHINE LEARNING
+                       │
+          Learn patterns from DATA
+                       │
+          ┌────────────┴─────────────┐
+          │                          │
+   Traditional ML               ML PROCESS
+ Program + Data → Output      Data + Labels
+                                  ↓
+                                Train
+                                  ↓
+                                Model
+                                  ↓
+                              New Input
+                                  ↓
+                             Prediction
+👨‍🔬 Definitions
+Arthur Samuel → 1959
+"Learn without explicit programming"
+
+Tom Mitchell → P, T, E
+
+T = Task
+P = Performance
+E = Experience
+📚 Terminology
+Feature       = one clue
+Feature vector = many clues
+Model         = learned representation
+Training      = learning from data
+Prediction    = output for new data
+Target/Label  = what we want to predict
+🧠 Learning Types
+SUPERVISED
+   ↓
+Labels available
+   ↓
+Classification / Regression
+
+UNSUPERVISED
+   ↓
+No labels
+   ↓
+Clustering / Dimensionality Reduction
+
+SEMI-SUPERVISED
+   ↓
+Few labels + lots unlabeled data
+
+REINFORCEMENT
+   ↓
+Actions
+ ↓
+Reward / Penalty
+ ↓
+Learn
+🏷️ Classification Predict category
+🔢 Regression   Predict number
+🔍 ML tasks
+Recognize → Generate → Detect anomalies → Predict
+⚠️ Limitations
+Bias → Data → Technical expertise → Resources
+🧠 Machine Learning - Week #02
+Supervised Learning & Linear Regression
+Think of our goal like this:
+👶 Machine: "I don't know how to predict house prices."
+👩‍🏫 Teacher: "Here are many houses. I will tell you their sizes AND their actual prices."
+🤖 Machine: "Okay! I'll learn the relationship."
+🏠 New house: "What is my price?"
+🤖 Machine: "Based on what I learned, approximately $300,000."
+That is the basic idea of Supervised Learning.
+1. 🎓 What is Supervised Learning?
+👶 Kid-level explanation
+Suppose I show you:
+🐱 🐱 🐱 🐱
+🐶 🐶 🐶 🐶
+I tell you: "These are cats." And "These are dogs." After seeing many examples, 
+The child sees both:	
+* the example 
+* the correct answer/label 
+Then you show: 🐱 → ?
+The child says: "Cat!"  child learned from examples.
+That's similar to supervised learning.
+🧠 Technical definition
+In supervised learning: We give the machine input data + correct output/label, and the model learns a relationship that can be used to predict outputs for new inputs.
+Basic flow
+          SUPERVISED LEARNING
+                    │
+                    ▼
+          ┌──────────────────┐
+          │ Training Dataset │
+          └────────┬─────────┘
+                   │
+            Input + Correct Output
+                   │
+                   ▼
+              🤖 MODEL
+                   │
+                LEARNS
+                   │
+                   ▼
+             New Input X
+                   │
+                   ▼
+              🤖 MODEL
+                   │
+                   ▼
+             Predicted Y
+🧠 Memory trick Supervised = Student with Teacher S = Supervised = Someone shows the Solution
+
+2. 📈 Linear Regression
+Linear regression is finding a straight-line mathematical relationship between variables and using that relationship to predict future outcomes. 
+provides a linear relationship between an independent variable and a dependent variable to predict the outcome of future events. 
+👶 Imagine this Suppose you have these houses:
+🏠 House size💰 Price1000 sq ft$100k1500 sq ft$150k2000 sq ft$200k2500 sq ft$250kNotice something?
+As: House size ↑  price also: Price ↑
+We can draw points on a graph.
+Price
+  │
+250│                 ●
+  │
+200│            ●
+  │
+150│       ●
+  │
+100│  ●
+  │
+  └──────────────────────
+     1000 1500 2000 2500
+          House Size
+Now we try to draw one straight line that represents this relationship.
+That line is our Linear Regression Model.
+3. 🔑 Independent vs Dependent Variable
+* X-axis = Independent variable 
+* Y-axis = Output / dependent variable 
+* Regression line = Best-fit line 
+Example: We want to predict house price. The price depends on house size.
+TermMeaningExampleIndependent variableInputHouse sizeDependent variableOutputHouse priceXInput2000 sq ftYOutput$200,000🧠 Memory trick X → Y "What happens to Y when X changes?"
+
+4. 📊 What is a Training Example?
+ (x, y) = one training example and
+(x⁽ⁱ⁾, y⁽ⁱ⁾) = ith training example. 
+For example:
+x(1) = 2104  y(1) = 460
+
+x(2) = 1416  y(2) = 232
+So:
+Training Example #1
+       ↓
+(2104 , 460)
+
+Training Example #2
+       ↓
+(1416 , 232)
+Think of each pair as a student record: (input, correct answer)
+5. 📐 Equation of a Straight Line
+You probably learned this in mathematics:  y = mx + c or y = f(x) Where:
+SymbolMeaningyOutput/ dependent featurexInput/ independent featuremSlopecConstant/intercept
+6. 🤖 Linear Regression's Version
+Machine learning commonly writes the line as: h(x) = θ0 ​+ θ1​x 
+Don't panic! 😄 It's basically the same idea.
+Mathematics             Machine Learning
+
+y = mx + c       →      h(x) = θ₀ + θ₁x
+
+c                 →      θ₀
+m                 →      θ₁
+x                 →      x
+y                 →      h(x)
+What does h(x) mean?  h(x) = predicted output
+For example:
+House size = 2000 sq ft
+        ↓
+       h(x)
+        ↓
+Predicted price = $200,000
+🧠 Memory trick
+θ₀ = where the line starts(constant)
+θ₁ = how strongly X changes the prediction(slope)
+7. 🎯 What is the Goal of Linear Regression?
+The model needs to learn: θ0​  and θ1​ 
+the goal is to learn these parameters and h(x). Why? Because different values produce different lines.
+                 Different θ values
+                       │
+       ┌───────────────┼───────────────┐
+       ▼               ▼               ▼
+
+     ／              ／               ／
+   ／              ／               ／
+ ／              ／               ／
+
+Bad line       Better line       Best line
+We want the line that makes the predictions as close as possible to the real data.
+That is the: ⭐ Best Fit Line
+8. 🎯 Best Fit Line
+We want a line that passes as close as possible to them.
+The best-fit line is the line that gives the best overall representation of the relationship.
+Actual value
+     │
+     │
+     ●
+     │\
+     │ \
+     │  ● Predicted value
+     │
+     └──────────────
+          Error
+The distance between: Actual value and Predicted value is the error.
+
+9. ❌ Why Do We Need a Cost Function?
+Suppose we have three possible lines.
+Line A → errors = huge ❌
+Line B → errors = medium 😐
+Line C → errors = small ✅
+How does the computer know which one is better? We need a way to measure the error. That's the job of the: 💰 Cost Function
+Think of cost as: "How bad is my model?" The cost function for Linear regression is:
+
+🧠 Memory trick Cost = How much the model is paying for its mistakes
+Lower cost = better model.
+HIGH COST😭
+   │
+   ▼
+Lots of mistakes
+
+      ↓ training
+
+LOW COST 😊
+   │
+   ▼
+Small mistakes
+
+10. 📏 Mean Squared Error - MSE
+Your slides introduce MSE as averaging the squared errors.  Suppose:
+ActualPredictedError1009010200210-1030028020If we simply add errors: 10 + (-10) + 20 = 20 That's problematic because positive and negative errors can cancel each other.
+So we square them.
+10² = 100
+(-10)² = 100
+20² = 400
+Then calculate their average.
+MSE = (100 + 100 + 400) / 3
+
+    = 600 / 3
+
+    = 200
+Why square? Because: Both become positive.
+Do it in this order:
+ERROR
+  ↓
+SQUARE
+  ↓
+AVERAGE
+  ↓
+MSE
+
+11. 🧠 Training = Finding the Best Parameters
+training aims to find parameters that minimize the loss function(cost function).  Imagine you're adjusting a machine.
+θ₀ ──┐
+     ├──► MODEL ──► Prediction
+θ₁ ──┘                 │
+                       ▼
+                    Compare
+                       │
+                       ▼
+                    Cost/MSE
+                       │
+                       ▼
+                 Adjust θ values
+Then repeat.
+Predict
+   ↓
+Calculate error
+   ↓
+Calculate cost
+   ↓
+Change parameters
+   ↓
+Predict again
+   ↓
+Calculate error
+   ↓
+...
+This repeated improvement is training.
+
+12. ⛰️ Gradient Descent
+gradient descent is an iterative optimization algorithm used to minimize errors/cost. 
+👶 Imagine you're on a mountain
+You are blindfolded 😅. You want to reach the lowest point of the valley.
+             ⛰️
+           /     \
+         /         \
+       /             \
+     /                 \
+   /                     \
+  ─────────────────────────
+             🕳️
+          LOWEST POINT
+You can't see the entire mountain. So you feel the ground.
+You ask: "Which direction goes downhill?"
+Then: Take a step downhill.
+Repeat.
+START
+  ●
+   \
+    ●
+     \
+      ●
+       \
+        ●
+         \
+          ⭐ MINIMUM
+That's the intuition behind Gradient Descent.
+13. 🤖 Gradient Descent in Machine Learning
+The computer does:
+Start with random θ values
+             ↓
+       Make prediction
+             ↓
+        Calculate cost
+             ↓
+     Find direction of descent
+             ↓
+       Update θ values
+             ↓
+       Calculate cost again
+             ↓
+        Is cost smaller?
+          /       \
+        YES       NO
+         │         │
+         ↓         ↓
+      Continue   Adjust
+         │
+         ▼
+   Reach minimum
+The slides describe starting from an arbitrary point, determining the slope, and using that information to update parameters until reaching the minimum/convergence point. 
+14. 📉 The Gradient
+The word gradient basically tells us: Which direction should I move to reduce the cost?
+Imagine standing on a hill.
+             You
+              🧍
+             /|
+            / |
+           /  |
+          /   |
+       ↓ downhill
+Gradient descent moves in the direction that decreases the cost.
+🧠 Memory trick Gradient = Direction Descent = Down
+Gradient Descent = Move in the direction that takes us DOWN the cost.
+
+15. 🏃 Learning Rate α
+Your slides call the learning rate the step size / alpha. Imagine walking downhill.
+Small step 👣
+●
+ ↓
+●
+ ↓
+●
+ ↓
+⭐
+Safe, but slow.
+Huge step 🏃 ● ───────────────►
+                  ↓
+              overshoot!
+You might jump over the minimum.
+Learning rate controls:
+How big a step we take when updating parameters. Usually represented by: α 
+High learning rate
+Large steps
+   ↓
+Fast
+   ↓
+Can overshoot ❌
+Low learning rate
+Small steps
+   ↓
+More precise
+   ↓
+Slow 🐢
+High learning rates can overshoot, while low rates can require many iterations and more computation. 
+🧠 Memory trick α = Amount of each step
+
+16. 🎯 Cost Function + Gradient Descent Together
+Cost Function asks: ❓ "How bad is my model?"
+Gradient asks: ❓ "Which direction should I move?"
+Learning rate asks: ❓ "How BIG should my step be?"
+Gradient Descent does: 🏃 "Take the step."
+Put them together:
+                 MODEL
+                   │
+                   ▼
+               Prediction
+                   │
+                   ▼
+             Cost Function
+                   │
+              "How bad?"
+                   │
+                   ▼
+            Gradient "Which way?"
+                   │
+                   ▼
+          Learning Rate α
+             "How far?"
+                   │
+                   ▼
+          Update parameters
+                   │
+                   └───────────┐
+                               │
+                               ▼
+                           Repeat 🔄
+Cost = How bad?    Gradient = Which way?    Learning rate = How far?
+
+17. 🏔️ Cost Function Graph
+Imagine this graph:
+Cost J(θ)
+  │
+  │ ●
+  │  \
+  │   \
+  │    \
+  │     \
+  │      \____
+  │           \____
+  │                ⭐
+  │              Minimum
+  └──────────────────────── θ
+The goal:
+HIGH COST
+   ↓
+REDUCE COST
+   ↓
+LOW COST
+   ↓
+MINIMUM ⭐
+The slides call this point of convergence the lowest point where the optimization reaches its target. 
+
+18. 🔄 The Complete Linear Regression Training Process
+Now let's connect EVERYTHING.
+        📊 TRAINING DATA
+              │
+              ▼
+       Initialize θ₀, θ₁
+              │
+              ▼
+       Linear Model
+      h(x)=θ₀+θ₁x
+              │
+              ▼
+        Make Prediction
+              │
+              ▼
+       Compare with y
+              │
+              ▼
+        Calculate Error
+              │
+              ▼
+       Calculate MSE/Cost
+              │
+              ▼
+      Calculate Gradient
+              │
+              ▼
+       Apply Learning Rate
+              │
+              ▼
+       Update θ₀ and θ₁
+              │
+              ▼
+       Cost decreased?
+          /       \
+        NO         YES
+        │           │
+        └─────┬─────┘
+              ▼
+           Repeat
+              │
+              ▼
+       ⭐ Minimum Cost
+              │
+              ▼
+       Best-fit Model
+
+19. 🧮 The Parameters θ₀ and θ₁
+Think of these as two knobs 🎛️.
+           MODEL
+
+      θ₀ 🎛️        θ₁ 🎛️
+       │             │
+       ▼             ▼
+    Starting      Steepness
+    position      / slope
+       │             │
+       └──────┬──────┘
+              ▼
+         Prediction
+θ₀    Controls the starting/intercept position.
+θ₁    Controls the slope.
+θ₁ large positive:
+
+        /
+       /
+      /
+     /
+
+θ₁ near zero:
+
+──────────────
+
+θ₁ negative:
+
+\
+ \
+  \
+   \
+
+20. 🚀 Why Optimization Is Important
+Because we need to minimize total error.  Imagine:
+Model A  Error = 500 😭
+
+Model B  Error = 200 😐
+
+Model C  Error = 20 😃
+Optimization helps us move toward Model C.
+Optimization finds parameter values that make the model's predictions as accurate as possible according to the chosen cost function.
+
+21. ⚡ Three Types of Gradient Descent
+Your slides introduce:  bsm
+🟢 A. Batch Gradient Descent
+Use all training examples for each update.
+Suppose you have: 1000 training examples  One update uses: 1 → 1000   all of them.
+👶 Example
+Teacher wants to know how well the entire class performed.
+Teacher asks: "Let's look at everyone's results."
+👩‍🏫
+ │
+ ├── 👦
+ ├── 👧
+ ├── 👦
+ ├── 👧
+ ├── 👦
+ └── ...
+      ↓
+  Calculate update
+Advantage: More stable update.
+Disadvantage: Can be expensive for huge datasets.
+22. 🔴 B. Stochastic Gradient Descent - SGD
+Stochastic = random
+SGD uses one training example per iteration
+Suppose: 1000 examples  It may do:
+Example 1 → update
+Example 2 → update
+Example 3 → update
+Example 4 → update
+...
+👶 Example Teacher asks only one student at a time:
+👩‍🏫 → 👦 → Update
+
+👩‍🏫 → 👧 → Update
+
+👩‍🏫 → 👦 → Update
+Memory trick  SGD = Single example
+23. 🟡 C. Mini-Batch Gradient Descent
+This is the middle ground.
+Suppose: 1000 examples  Divide into small groups:
+Batch 1 → 32 examples
+Batch 2 → 32 examples
+Batch 3 → 32 examples
+...
+Then update after each small batch.
+1000 examples
+      ▼
+┌─────┬─────┬─────┬─────┐
+│ 32  │ 32  │ 32  │ 32  │ ...
+└─────┴─────┴─────┴─────┘
+   ↓
+ Update
+   ↓
+ Update
+   ↓
+ Update
+Mini-batch is the combination of batch and stochastic approaches, dividing data into smaller batches. 
+MethodData used per updateMemory trick🟢 BatchALLB = Big/all Batch🔴 SGDONES = Single🟡 Mini-BatchSMALL groupMini = Small groupOne picture:
+BATCH ████████████████  ALL DATA
+
+
+SGD █  ONE
+
+
+MINI-BATCH ████ SMALL GROUP
+
+24. ⚠️ Challenges of Gradient Descent
+Your slides specifically discuss: lve
+25. 🕳️ Local Minimum
+Imagine a mountain with multiple valleys.
+Cost
+ │
+ │       /\          /\
+ │      /  \        /  \
+ │  ___/    \______/    \___
+ │       ↑       ↑
+ │   local       global
+ │   minimum     minimum
+ └──────────────────────────
+A local minimum is a low point that may not be the lowest point overall.
+👶 Example You're walking downhill and reach a small valley.
+You think: "I've reached the bottom!"  But there is another deeper valley elsewhere.
+🧠 Memory trick Local = nearby low point  Global = lowest overall
+26. 🪑 Saddle Point
+Imagine a horse saddle.
+        /\ 
+       /  \
+──────/    \──────
+It can curve upward in one direction and downward in another.
+A saddle point can create difficulty for optimization because the gradient behavior isn't simply like a normal minimum.
+
+Memory trick Saddle = horse saddle 🐎
+27. 🫥 Vanishing Gradient
+This is mainly discussed in the context of neural-network training in the slides. Imagine sending a message through several people:
+Person 1
+  ↓
+Person 2
+  ↓
+Person 3
+  ↓
+Person 4
+  ↓
+Person 5
+Your message becomes weaker and weaker:
+1.0
+ ↓
+0.5
+ ↓
+0.1
+ ↓
+0.01
+ ↓
+0.001
+Eventually it becomes almost zero. That's the intuition of a vanishing gradient.
+the gradient becoming smaller during backpropagation, making parameter updates in earlier layers insignificant. 
+🧠 Memory trick Vanishing = Gradient disappears
+28. 💥 Exploding Gradient
+Opposite! Instead of becoming tiny:
+0.1
+ ↓
+1
+ ↓
+10
+ ↓
+100
+ ↓
+1000
+The gradient becomes extremely large. Exploding gradients as the opposite of vanishing gradients, where gradients become too large and weights can grow dramatically. 
+🧠 Memory trick Exploding = Gradient becomes HUGE 💥
+29. 🧠 Vanishing vs Exploding
+FeatureVanishingExplodingGradientVery smallVery largeEffectUpdates become tinyUpdates become hugeMemory🫥 Disappears💥 ExplosionMain ideaToo little signalToo much signalSuper-memory trick: V = Very Small   E = Extremely Large
+
+30. 🧩 Multiple Features
+linear regression with multiple features. 
+So far we had: House Size → Price
+Only one feature. But real life is more complicated. House price might depend on:
+* 📐 Size 
+* 🛏️ Bedrooms 
+* 🚿 Bathrooms 
+* 📍 Location 
+* 🏠 Age 
+So:
+Size ───────────┐
+Bedrooms ───────┤
+Bathrooms ──────┤
+Location ───────┼──► 🤖 Model ──► Price
+Age ────────────┤
+31. 📐 Multiple Linear Regression
+Instead of: h(x) = θ0 ​+ θ1​x 
+we conceptually have something like: h(x) = θ0 ​+ θ1​x1 ​+ θ2​x2 ​+ θ3​x3 ​+⋯ 
+For example: Price = θ0​+θ1​(Size) + θ2​(Bedrooms) + θ3​(Bathrooms) 
+Each feature gets its own parameter/weight.
+🗺️ COMPLETE MIND MAP
+                         🧠 MACHINE LEARNING
+                                │
+                                ▼
+                     🎓 SUPERVISED LEARNING
+                                │
+                                ▼
+                       📈 LINEAR REGRESSION
+                                │
+              ┌─────────────────┼──────────────────┐
+              │                 │                  │
+              ▼                 ▼                  ▼
+         Input X           Output Y          Best Fit Line
+       Independent        Dependent                │
+              │                 │                  │
+              └────────┬────────┘                  │
+                       ▼                           │
+                  h(x)=θ₀+θ₁x ◄──────────────────┘
+                       │
+                       ▼
+                  Prediction
+                       │
+                       ▼
+                   ❌ Error
+                       │
+                       ▼
+                 💰 COST / MSE
+                       │
+                       ▼
+                ⛰️ GRADIENT DESCENT
+                       │
+             ┌─────────┼─────────┐
+             │         │         │
+             ▼         ▼         ▼
+          Gradient     α      Update θ
+        Direction   Step size
+             │
+             ▼
+          Minimize Cost
+             │
+             ▼
+       ⭐ Best Parameters
+             │
+             ▼
+       📊 Training Complete
+             │
+             ▼
+       Multiple Features
+
+🔥 THE 10 THINGS YOU MUST KNOW 
+1️⃣ Supervised Learning Input + known output → model learns
+2️⃣ Linear Regression Find a straight-line relationship between variables.
+5️⃣ Best Fit Line: Line that represents the relationship and minimizes prediction error according to the objective.
+6️⃣ Cost Function: Measures how bad the model's predictions are.
+7️⃣ MSE Mean of squared errors.
+Error → Square → Mean
+8️⃣ Gradient Descent: Optimization method that repeatedly moves parameters toward lower cost.
+9️⃣ Learning Rate α: Controls the size of each parameter-update step.
+🔟 Batch / SGD / Mini-Batch
+Batch       = ALL
+SGD         = ONE
+Mini-Batch  = SMALL GROUP
+
+🧠 ULTIMATE MEMORY STORY
+Imagine you're teaching a robot to predict 🍕 pizza prices.
+Step 1 - Supervised Learning 👩‍🏫
+You give: Pizza size → Actual price
+Step 2 - Linear Regression 📈
+Robot tries to draw:
+Price
+ │       ●
+ │     ／
+ │   ●
+ │ ／
+ │●
+ └──────── Size
+Step 3 - Prediction 🤖 Robot predicts a price.
+Step 4 - Error ❌   Compare: Actual price vs Predicted price
+Step 5 - MSE   Calculate overall squared error.
+Step 6 - Gradient Descent ⛰️
+Robot asks: "Which direction reduces my error?"
+Step 7 - Learning Rate 👣
+Robot asks: "How large a step should I take?"
+Step 8 - Repeat   pecgur
+Predict
+ ↓
+Error
+ ↓
+Cost
+ ↓
+Gradient
+ ↓
+Update
+ ↓
+Repeat
+Step 9 - Minimum ⭐
+Eventually: "My cost is as low as I can make it."
+Step 10 - Multiple Features 🧩
+Robot realizes: "Pizza price doesn't only depend on size!"
+Maybe: Size, Toppings, Cheese, Restaurant, Delivery distance
+All can become features.
+
+⏱️ 5-MINUTE REVISION SHEET
+Minute 1 - Core idea
+Supervised Learning
+       ↓
+Input + Correct Output
+       ↓
+Learn relationship
+       ↓
+Predict new output
+Minute 2 - Linear Regression
+X = Independent/Input
+Y = Dependent/Output
+
+h(x) = θ₀ + θ₁x
+* θ₀ → intercept/constant 
+* θ₁ → slope 
+* h(x) → prediction 
+* Goal → good/best fit 
+Minute 3 - Error & Cost
+Actual Y
+   │
+   ├──── difference ────► Error
+   │
+Predicted Y
+
+Error → Square → Mean = MSE
+Cost = measure of model error.
+Minute 4 - Gradient Descent
+Cost
+ │\
+ │ \
+ │  \
+ │   \____ ⭐
+ │       Minimum
+ └────────────── θ
+* Gradient → direction 
+* Descent → downward 
+* α → step size 
+* Goal → minimize cost 
+Remember:
+Cost = How bad?
+Gradient = Which way?
+α = How far?
+Minute 5 - GD types + problems
+ConceptRememberBatchALLSGDONEMini-BatchSMALLLocal minimumNearby low pointGlobal minimumOverall lowestVanishingToo smallExplodingToo largeMultiple featuresMany X variables🎯 Exam Strategy for >80%
+For MCQs, watch especially for these traps:	
+Trap 1 "Y is independent variable."
+❌ False in this slide's terminology.
+X = Independent  Y = Dependent
+Trap 2 "Learning rate determines direction."
+❌ No.
+Gradient → direction
+Learning rate → step size
+Trap 3 "Cost function updates the parameters."
+Be careful. The cost function measures error; gradient descent uses the optimization information to update parameters.
+Trap 4 "SGD uses all training examples."
+❌ No.
+SGD = one example per iteration
+Trap 5 "High learning rate is always better because it's faster."
+❌ It can overshoot the minimum.
+Trap 6 "Vanishing gradient = very large gradient."
+❌ Opposite.
+Vanishing = too small
+Exploding = too large
+🧠 WEEK 3 - MACHINE LEARNING
+🧒 FIRST: WHAT PROBLEM IS THIS LECTURE SOLVING?
+Imagine you're teaching a robot 🤖. Last week you taught it: "Given one thing, predict another thing." Example: House size → House price But real life isn't that simple. House price depends on:
+🏠 Size
+🛏️ Bedrooms
+🚿 Bathrooms
+📍 Location
+🏗️ Age
+🚗 Parking
+So Week 3 asks: How can we make our model smarter when we have MANY features?
+Then: What if a straight line doesn't fit?
+Then: What if we're predicting a category rather than a number?
+Then: What if our model memorizes the training data too much?
+
+PART 1 - 📈 LINEAR REGRESSION WITH MULTIPLE FEATURES
+🧒 6-year-old explanation
+Suppose you want to guess the price of a toy. You look at:
+* 🎨 color 
+* 📏 size 
+* ⭐ quality 
+* 🧸 age 
+* 🏷️ brand 
+Instead of using only one clue, you use many clues. That's the basic idea of:
+Multiple Linear Regression
+🔵 One feature
+Previously: y^ ​= θ0 ​+ θ1​x 
+Example: Size ───────────────► Price
+🟢 Multiple features
+Now: y^ ​= θ0 ​+ θ1​x1 ​+ θ2​x2 ​+ θ3​x3 ​+⋯  (Think of θ values as importance knobs)
+Example:
+                  ┌── 🏠 Size
+                  ├── 🛏️ Bedrooms
+                  ├── 🚿 Bathrooms
+                  ├── 📍 Location
+                  ▼
+               🤖 MODEL
+                  │
+                  ▼
+              💰 House Price
+🧠 MEMORY TRICK MULTIPLE FEATURES = MULTIPLE CLUES 🔍
+More clues → better-informed prediction.
+💻 Technical example
+Suppose:
+x₁ = house size
+x₂ = bedrooms
+x₃ = bathrooms
+Then: y^ ​= θ0 ​+ θ1​x1 ​+ θ2​x2 ​+ θ3​x3​ 
+Suppose: θ0 ​= 20, θ1​ = 0.1, θ2 ​= 10, θ3 ​= 15 
+For: size = 2000, bedrooms = 3, bathrooms = 2
+we get: 20 + (0.1)(2000) + (10)(3) + (15)(2) = 20 + 200 + 30 + 30 = 280 
+So prediction = 280.
+💻 Python
+from sklearn.linear_model import LinearRegression
+
+X = [
+    [1000, 2, 1],
+    [1500, 3, 2],
+    [2000, 4, 2],
+    [2500, 5, 3]
+]
+
+y = [100, 150, 200, 250]
+
+model = LinearRegression()
+
+model.fit(X, y)
+
+prediction = model.predict([[2200, 4, 2]])
+
+print(prediction)
+The model learns one coefficient for each feature.
+
+PART 2 - 📏 FEATURE SCALING
+Feature scaling as bringing features with different ranges, units, or magnitudes onto comparable scales. 
+🧒 Imagine this
+You have two students: Student A: Age = 20 Salary = 100,000  Student B: Age = 25 Salary = 110,000
+Look at the numbers:
+Age       → 20    Salary    → 100,000
+Salary has a MUCH bigger numerical scale. A machine may think:
+"100,000 must be much more important than 20!" But that isn't necessarily true.
+🚨 THE PROBLEM
+Different features can have completely different ranges:
+FeatureRangeAge18-70Salary20,000-500,000CGPA0-4Experience0-30 yearsWithout scaling:
+Salary ███████████████████████████
+Age    ███
+CGPA   █
+The large-scale feature can dominate algorithms that use distances, and unequal scales can make gradient-based optimization slower or unstable. 
+🧠 MEMORY TRICK 📏 SCALING = "MAKE EVERYONE SPEAK THE SAME LANGUAGE"
+Age says: 25    Salary says: 100,000
+Scaling translates them into comparable numerical ranges.
+🎯 WHY FEATURE SCALING MATTERS
+Three important situations: dgr
+1️⃣ Distance-based algorithms
+Examples:
+* KNN 
+* K-Means 
+* SVM 
+Large features can dominate distance calculations. 
+2️⃣ Gradient-based algorithms
+Examples:
+* Linear Regression 
+* Logistic Regression 
+* Neural Networks 
+Unequal scales distort the cost surface and can slow convergence. 
+3️⃣ Regularization
+Ridge and Lasso can be affected because coefficients associated with large-scale features can be treated disproportionately. 
+
+⛰️ VISUALIZE THE PROBLEM
+Without scaling:
+Cost
+ │
+ │       ╭────────────╮
+ │      ╱              ╲
+ │     ╱                ╲
+ │    ╱                  ╲
+ │___╱____________________╲____
+           θ
+
+Gradient path:
+     ↘
+       ↙
+         ↘
+           ↙
+              ⭐
+The path can zig-zag.
+With scaling:
+Cost
+ │
+ │        ______
+ │      /        \
+ │     /          \
+ │    |     ⭐     |
+ │     \          /
+ │      \________/
+ │
+ └────────────────
+The path can be much more direct.
+Unscaled contours as tall/skinny and scaled contours as more circular, allowing gradient descent to move more directly toward the optimum. 
+PART 3 - TYPES OF FEATURE SCALING
+Your slide teaches four: smrm
+🟦 1. STANDARDIZATION / Z-score normalization
+Formula: z = σx −  μ​ 
+
+Where:
+* x = original value 
+* μ = mean 
+* σ = standard deviation 
+Your slide states that standardization produces: μ=0  and σ=1 
+🧒 Example
+Suppose:
+μ Mean = 50
+σ Standard deviation = 10
+Student = 70
+Then: z = 10 70 - 50 ​= 2 
+Meaning: The student is 2 standard deviations above the mean.
+🧠 MEMORY  STANDARD = Z
+Think: Standardization → Z-score
+🟩 2. MIN-MAX SCALING
+Formula: x′ = xmax ​− xmin​x − xmin​​ 
+
+It normally puts values between: 0→1 
+Your slide explicitly says Min-Max scaling brings the data into the 0-1 range. 
+🧒 Example
+Values: 10, 20, 30, 40
+For 30: 40 - 10 &  30 - 10 ​ =  30 & 20​ = 0.667 
+🧠 MEMORY MIN-MAX = 0 TO 1
+🟨 3. ROBUST SCALER
+It handles OUTLIERS better.
+RobustScaler uses the median and quartiles/IQR, making it less sensitive to outliers. 
+Formula given: (x - Q2) / (Q3 - Q1)
+where:
+* Q2 = median 
+* Q1 = first quartile 
+* Q3 = third quartile 
+And: IQR = Q3 − Q1 
+🧒 Real-life example
+Imagine salaries:
+30k
+35k
+40k
+45k
+50k
+10,000,000
+That last person is extremely rich 💰. That's an outlier.
+Mean can be heavily affected. Median is much more stable. So:
+🧠 MEMORY ROBUST = RESISTS OUTLIERS 🛡️
+🟪 4. MAXABS SCALER
+MaxAbsScaler scales each feature so its maximum absolute value becomes 1.0, using:
+X_scaled = X / max(abs(X))
+and highlights its usefulness for sparse data. 
+🧠 MEMORY MAXABS = MAX absolute → 1
+And remember: Sparse data → MaxAbs
+🏆 SCALING MASTER TABLE
+MethodMain ideaRemember🟦 StandardScalerMean 0, SD 1Z🟩 MinMaxScalerUsually 0-1MIN → MAX = 0→1🟨 RobustScalerMedian + IQROutliers🟪 MaxAbsScalerMax absolute value = 1Sparse🔥 Four-word memory: Z - 0/1 - OUTLIER - SPARSE
+9. Scaling methods - memorize this table
+MethodMain ideaStandardScalerMean ≈ 0, std ≈ 1MinMaxScalerUsually maps to 0-1/255Image pixels 0-255 → 0-1RobustScalerUses median/IQR; handles outliers betterMaxAbsScalerScales based on maximum absolute valueIf teacher asks:
+"Which scaler is resistant to outliers?"
+→ RobustScaler
+"How do you normalize 8-bit image pixels?"
+→ divide by 255
+"Which scaler gives approximately mean 0 and standard deviation 1?"
+→ StandardScaler
+"Which commonly maps values to 0-1?"
+→ MinMaxScaler
+
+PART 4 -PRACTICAL LEARNING RATE
+Your Week 2 taught what learning rate is. Week 3 asks: How do we choose it practically?
+Learning rate is a hyperparameter controlling how much the model changes when weights are updated. 
+🧒 Imagine walking down stairs
+Tiny learning rate:
+👣
+ 👣
+  👣
+   👣
+    ⭐
+Very slow.
+Huge learning rate:
+👣────────────►
+              ───────►
+                         😵
+You may jump over the minimum.
+🔴 Learning rate too small
+α = 0.000001
+Problem: Training may take a VERY long time.
+🔴 Learning rate too large
+Problem: May overshoot or become unstable. The slide explicitly notes both dangers. 
+🧠 MEMORY SMALL = SLOW BIG = BOOM 💥
+
+PART 5   POLYNOMIAL REGRESSION
+🧒 The problem
+Suppose your data looks like this:
+
+A straight line won't fit very well.  So we need a curve.
+📈 Polynomial Regression
+Polynomial regression is a form of linear regression where the relationship is represented using an nth-degree polynomial. 
+Example:
+Degree 1 y = θ0 ​+ θ1​x    Straight line.
+Degree 2 y = θ0​ + θ1​x + θ2​x2  Quadratic curve.
+Degree 3 y = θ0 ​+ θ1​x + θ2​x2 + θ3​x3  Cubic curve.
+🧠 MEMORY
+Think: 1 = Line      2 = U / ∩       3 = S-like curve
+🤯 WHY IS IT CALLED "LINEAR" REGRESSION?
+This confuses many students.
+Look carefully: y = θ0​ + θ1​x + θ2​x2 
+It is nonlinear in x.
+But it is still linear in the parameters θ. That's why it can still be treated as a linear model in the coefficients.
+
+PART 6 - 🧮 NORMAL EQUATION
+The Normal Equation a one-step analytical method for finding coefficients that minimize the loss function, particularly useful when the number of features is small. 
+🧒 Gradient Descent vs Normal Equation
+Imagine you're at a mountain.
+Gradient Descent:
+Start
+ ↓
+Step
+ ↓
+Step
+ ↓
+Step
+ ↓
+Step
+ ↓
+Bottom
+Normal Equation:
+Start
+ ↓
+🧮 Mathematical calculation
+ ↓
+⭐ Answer
+🧠 MEMORY
+Gradient Descent = WALK  Normal Equation = CALCULATE
+Python from your slide
+theta = np.dot(
+    np.linalg.inv(np.dot(X.T, X)),
+    np.dot(X.T, y)
+)
+Conceptually:
+X
+│
+├── transpose X.T
+├── matrix multiplication
+├── inverse
+└── calculate θ
+Understand: Normal Equation directly calculates the optimal θ.
+🏆 NORMAL EQUATION vs GRADIENT DESCENT
+Normal EquationGradient DescentMethodAnalyticalIterativeLearning rate❌ No✅ YesIterations❌✅Good forSmall feature setsLarger problemsIdeaCalculateWalk
+PART 7 - 🔵 LOGISTIC REGRESSION
+Before: Predict a number. Now: Predict a category.
+Logistic regression as a machine learning algorithm for classification, based on probability. 
+🧒 Example
+Linear regression:
+How much will the house cost?
+      ↓
+$250,000
+Logistic regression:
+Is this email spam?
+      ↓
+YES / NO
+Another:
+Is patient infected?
+      ↓
+YES / NO
+Another:
+Will student pass?
+      ↓
+PASS / FAIL
+🚨 VERY IMPORTANT
+Linear Regression
+Predicts: continuous number​  Examples:
+* salary 
+* temperature 
+* house price 
+* weight 
+Logistic Regression
+Predicts: class/category​  Examples:
+* spam/not spam 
+* sick/not sick 
+* pass/fail 
+
+Contrasts continuous outcomes in linear regression with discrete outcomes in logistic regression. 
+🧠 MEMORY LINEAR = NUMBER 🔢 LOGISTIC = LABEL 🏷️
+PART 8 - 🎯 SIGMOID FUNCTION
+This is the heart of logistic regression. The logistic function is also called the:
+Sigmoid function
+and produces values between: 0 and 1 
+
+🧒 Why do we need it?
+Imagine the model produces: z = 3 That isn't a probability. Sigmoid converts it:
+3
+↓
+Sigmoid
+↓
+≈ 0.95
+Meaning: Approximately 95% probability of class 1.
+🧠 MEMORY TRICK SIGMOID = SQUEEZE
+It squeezes any real number into: 0→1 
+
+PART 10 🎯 TYPES OF LOGISTIC REGRESSION
+Your slide gives three types. bmo
+1️⃣ Binary
+Only two outcomes.
+Spam / Not Spam
+Yes / No
+Pass / Fail
+Cancer / No Cancer
+Memory: BI = TWO
+2️⃣ Multinomial
+Three or more categories with no natural ordering.
+Example: Red Blue Green or: Cat Dog Bird
+Your slide uses handwritten Urdu characters as an example. 
+3️⃣ Ordinal
+Three or more categories that have an order/ranking.
+Example:
+1 ⭐
+2 ⭐
+3 ⭐
+Because: 1<2<3<4<5 
+Your slide uses restaurant/product ratings 1-5 as an example. 
+Memory: ORDINAL = ORDER
+🏆 MASTER TABLE
+TypeNumber of classesOrdered?ExampleBinary2-Spam / Not spamMultinomial3+❌Cat / Dog / BirdOrdinal3+✅1-5 rating
+PART 11 - 🚧 DECISION BOUNDARY
+Suppose:
+
+The model needs to decide: Which side belongs to class 0? Which side belongs to class 1?
+That separating line/curve is the: Decision Boundary
+🧒 Real-life example
+Imagine a school gate:
+The boundary separates two groups.
+🧠 MEMORY DECISION BOUNDARY = DIVIDING LINE ✂️
+
+PART 12 - 💰 LOGISTIC REGRESSION COST
+Logistic regression also needs a cost function.
+Why? Because the model needs to know: "How wrong am I?"
+For logistic regression, the commonly used loss is log loss / cross-entropy, rather than ordinary linear-regression MSE.
+
+Don't panic. Understand the idea:
+Prediction probability
+        ↓
+Compare with true class
+        ↓
+Calculate penalty
+        ↓
+Optimize model
+
+PART 13 - 🧩 MULTI-CLASS CLASSIFICATION
+Suppose you have: 🐱 Cat 🐶 Dog 🐦 Bird
+That's more than two classes. The model needs to decide among multiple categories.
+
+PART 14 - 🛡️ REGULARIZATION
+Regularization as a technique used to prevent overfitting by adding a penalty/complexity term. Imagine this
+You give a child 10 practice questions. The child doesn't learn the concept. Instead, they memorize:
+Question 1 → answer A
+Question 2 → answer C
+Question 3 → answer B
+Then you give a new question. They fail. That's like: OVERFITTING
+The model memorized training data instead of learning the general pattern.
+🧠 REGULARIZATION = "DON'T GET TOO FANCY"
+It tells the model: "Don't make yourself unnecessarily complicated." It penalizes overly large coefficients.
+Complex model
+     ↓
+Penalty
+     ↓
+Smaller coefficients
+     ↓
+Simpler model
+     ↓
+Better generalization
+regularization reduces coefficient magnitude while keeping the features in the model. 
+PART 15 - 😵 OVERFITTING
+Overfitting is learning training details/noise so strongly that performance on new data suffers. 
+Picture
+
+It tries to pass through every tiny detail.
+🧠 Memory OVERFITTING = MEMORIZES 🧠
+Symptoms
+Training performance = VERY GOOD    Test performance = BAD
+PART 16 - 😴 UNDERFITTING
+The opposite. The model is too simple. It doesn't learn the pattern properly.
+
+Underfitting is failing to learn the training pattern well and therefore performing poorly on both training and new data. 
+🧠 Memory UNDERFITTING = DIDN'T LEARN ENOUGH 📚
+🏆 OVERFITTING vs UNDERFITTING
+🔴 Overfitting🔵 UnderfittingModelToo complexToo simpleTrainingVery goodPoorTestPoorPoorMain issueMemorizationNot enough learningBiasLowHighVarianceHighLowAssociates overfitting with low bias/high variance and underfitting with high bias/low variance. 
+OVER = TOO MUCH      UNDER = TOO LITTLE
+
+PART 17 - ⚖️ BIAS AND VARIANCE
+Bias Think: How wrong is my model because it's too simple?
+High bias:
+Model is too simple
+↓
+Misses patterns
+↓
+Underfitting
+Variance Think: How much does my model change depending on the training data?
+High variance:
+Model reacts too much
+↓
+Learns noise
+↓
+Overfitting
+Bias is prediction/training error and variance in terms of the difference between training and testing errors. 
+MEMORY BIAS = TOO SIMPLE    VARIANCE = TOO SENSITIVE
+HIGH BIAS
+   ↓
+UNDERFIT
+
+HIGH VARIANCE
+   ↓
+OVERFIT
+
+PART 18 - 🔧 HOW TO FIX OVERFITTING
+You can:
+* Cross-validation 
+* Get more training data 
+* Remove features 
+* Early stopping 
+* Regularization 
+* Ensembling 
+🧠 Memory: O-F-M-E-R-E
+Think: Less complexity + more evidence.
+PART 19 - 🔧 HOW TO FIX UNDERFITTING
+Your slide lists: 
+* Increase features 
+* Increase model complexity 
+* Reduce noise 
+* Train longer 
+🧠 Simple idea:
+If the child doesn't understand enough:
+Give more information + allow more learning.
+
+PART 20 🛡RIDGE REGRESSION = L2 Regularization
+Now we enter regularization techniques.
+🧒 Imagine
+You have:
+Feature 1 → coefficient = 100
+Feature 2 → coefficient = 80
+Feature 3 → coefficient = 60
+Ridge says: "Whoa! Those coefficients are too large. Let's shrink them."
+Maybe:
+100 → 70
+80  → 55
+60  → 40
+It generally shrinks coefficients toward zero, but does not usually make them exactly zero.
+Ridge penalty
+
+Ridge adds a penalty involving squared coefficients: λj∑​θj2​  ⬆
+So conceptually: Cost = Original Cost + λ∑θj2​ 
+Your slide explicitly identifies Ridge as L2 and says its penalty uses squared weights multiplied by λ. 
+MEMORY RIDGE = L2 = SQUARE
+Think: Ridge has 2 → θ²
+PART 21 LASSO REGRESSION = L1 Regularization
+Lasso stands for: Least Absolute Shrinkage and Selection Operator and uses the absolute values of weights. 
+🧒 What makes Lasso special?
+Suppose:
+Feature A → 0.8
+Feature B → 0.5
+Feature C → 0.02
+Feature D → 0
+Lasso can push some coefficients exactly to zero.
+So the model effectively says: "Feature C isn't useful. Ignore it."
+Therefore: LASSO = REGULARIZATION + FEATURE SELECTION
+Lasso can help with overfitting and feature selection. 
+Lasso penalty
+ 
+Ridge: λ∑θj2​    Lasso: λ∑∣θj​∣ 
+🏆 RIDGE vs LASSO 
+RidgeLassoTypeL2L1Penaltyθ²|θ|Shrinks coefficients✅✅Can make coefficient exactly 0Usually ❌✅Feature selection❌✅Main memorySquareAbsolute🔥 THE MOST IMPORTANT MEMORY TRICK
+L1 → Lasso    L2 → Ridge
+LASSO → Absolute → 0 → Select features
+
+RIDGE → Square → Shrink
+Say it 3 times: Lasso selects.    Ridge shrinks.
+
+COMPLETE WEEK 3 MIND MAP
+                         WEEK 3
+                           │
+          ┌────────────────┼─────────────────┐
+          │                │                 │
+          ▼                ▼                 ▼
+       📈 LINEAR       📏 SCALING        🔵 LOGISTIC
+          │                │                 │
+          │                ├── Standard      ├── Classification
+          │                ├── MinMax        ├── Sigmoid
+          ├── Multiple     ├── Robust        ├── Probability
+          │   features     └── MaxAbs        ├── Boundary
+          │                                  └── Multiclass
+          ├── Polynomial
+          │
+          └── Normal Equation
+                           │
+                           ▼
+                     🛡️ REGULARIZATION
+                           │
+                ┌──────────┴──────────┐
+                ▼                     ▼
+             RIDGE                  LASSO
+              L2                     L1
+               │                      │
+            θ² penalty             |θ| penalty
+               │                      │
+          Shrinks weights       Feature selection
+               │                      │
+               └──────────┬───────────┘
+                          ▼
+                    🎯 GENERALIZATION
+                          │
+                 ┌────────┴────────┐
+                 ▼                 ▼
+            OVERFITTING       UNDERFITTING
+            LOW bias          HIGH bias
+            HIGH variance     LOW variance
+
+🔥 CONNECT EVERYTHING INTO ONE STORY
+Imagine you're building an ML model to predict whether a student will pass or fail.
+Step 1 - Multiple features
+You use:
+Study hours
+Attendance
+Previous marks
+Assignments
+Step 2 - Feature scaling
+Maybe:
+Study hours = 20
+Previous marks = 85
+Attendance = 90
+Scale them appropriately.
+Step 3 - Logistic Regression
+Because the output is:  PASS / FAIL  not a continuous number.
+Step 4 - Sigmoid
+Convert model output into probability:  0.87
+Step 5 - Decision Boundary
+For example:
+Probability >= 0.5 → PASS
+Probability < 0.5  → FAIL
+Step 6 - Cost Function
+Measure how badly the model is predicting.
+Step 7 - Optimization
+Adjust parameters to reduce cost.
+Step 8 - Regularization
+If model becomes too complicated:  Ridge or Lasso
+Step 9 - Generalization
+Final goal: 🎯 Perform well on NEW students.
+
+🧠 WEEK 3 - 5-MINUTE REVISION
+⏱1 MINUTE - MULTIPLE REGRESSION
+Many X → One Y   y^ ​= θ0 ​+ θ1​x1 ​+ θ2​x2​+⋯ 
+⏱2 MINUTES - FEATURE SCALING
+Standardization    z= σx − μ​ 
+Mean 0, SD 1
+Min-Max
+max−minx−min​ 
+Usually 0-1
+Robust
+Median + IQR  Good for outliers.
+MaxAbs
+X/max(∣X∣) 
+Maximum absolute value = 1; useful for sparse data.
+Memory: Z - 0/1 - OUTLIER - SPARSE
+⏱️ 3 MINUTES - POLYNOMIAL + NORMAL
+Polynomial
+Degree 1 → Linear
+Degree 2 → Quadratic
+Degree 3 → Cubic
+Normal Equation
+Direct mathematical solution.
+Gradient Descent
+Iterative solution.
+Memory:  Normal = Calculate  GD = Walk
+⏱️ 4 MINUTES - LOGISTIC REGRESSION
+Logistic
+   ↓
+Classification
+   ↓
+Probability
+   ↓
+Sigmoid
+   ↓
+0 to 1
+   ↓
+Decision boundary
+Types:
+Binary      → 2
+Multinomial → many, no order
+Ordinal     → many, ordered
+⏱️ 5 MINUTES - REGULARIZATION
+Overfitting
+Too complex
+↓
+Memorizes
+↓
+High variance
+↓
+Low bias
+Underfitting
+Too simple
+↓
+Doesn't learn enough
+↓
+High bias
+↓
+Low variance
+Regularization
+Penalize complexity.
+Ridge
+L2
+θ²
+Shrink
+Lasso
+L1
+|θ|
+Can become 0
+Feature selection
+⭐ "Lasso selects, Ridge shrinks."
+
+🚨 20 EXAM FACTS YOU SHOULD KNOW
+1. Feature scaling puts features on comparable scales. 
+2. KNN/K-Means/SVM can be strongly affected by feature magnitude because they use distances. 
+3. Gradient-based models can converge more efficiently after scaling. 
+4. Standardization uses mean and standard deviation. 
+5. Standardization gives mean ≈ 0 and standard deviation ≈ 1. 
+6. Min-Max normally maps values to 0-1. 
+7. RobustScaler uses median/IQR and is less affected by outliers. 
+8. MaxAbs makes the maximum absolute value 1 and is useful for sparse data. 
+9. Polynomial regression can model curved relationships. 
+10. Degree 2 = quadratic. 
+11. Normal Equation calculates parameters analytically. 
+12. Linear regression predicts continuous values. 
+13. Logistic regression is used for classification. 
+14. Sigmoid produces values between 0 and 1. 
+15. Ordinal = ordered classes. 
+16. Ridge = L2/shrink; Lasso = L1/feature selection. 
+🧠 FINAL "BRAIN PALACE"
+M-S-P-N-L-R
+M → Multiple features
+S → Scaling (Same scale)
+P → Polynomial (Polynomial curve)
+N → Normal Equation(One-step calculation)
+L → Logistic Regression(Labels / classification)
+R → Regularization(Reduce overfitting)
+
+Programming
+Dataset → Split → Scaling → Model → Training → Prediction → Evaluation → Compare Models
+DIGITS DATASET
+     ↓
+X = features
+y = target
+     ↓
+Train/Test Split
+     ↓
+Scale the features
+     ↓
+Train ML model
+     ↓
+Predict test data
+     ↓
+Compare predictions with actual answers
+     ↓
+Evaluate:
+Accuracy
+Precision
+Recall
+F1
+Confusion Matrix
+     ↓
+Try different ML algorithms
+     ↓
+Compare their performance
+
+Remember: Load → Split → Scale → Train → Predict → Evaluate
+For classification:
+DATA
+ ↓
+X / y
+ ↓
+SPLIT
+ ↓
+SCALE
+ ↓
+CLASSIFIER
+ ↓
+FIT
+ ↓
+PREDICT
+ ↓
+ACCURACY / PRECISION / RECALL / F1
+For regression:
+DATA
+ ↓
+X / y
+ ↓
+SPLIT
+ ↓
+SCALE
+ ↓
+REGRESSOR
+ ↓
+FIT
+ ↓
+PREDICT
+ ↓
+R² / MAE / MSE / RMSE
+
+34. The exam memory sheet
+Libraries
+import cv2                       OpenCV → images/computer vision
+import numpy as n                NumPy → numerical arrays
+import pandas as p               Pandas → tables/data
+import matplotlib.pyplot as plt  Matplotlib → graphs
+import seaborn as sns            Seaborn → statistical visualization
+from sklearn...
+Scikit-learn → machine learning
+
+Scaling
+StandardScaler()     → mean 0, std 1
+MinMaxScaler()       → usually 0-1
+RobustScaler()       → resistant to outliers
+img / 255            → common image normalization
+
+NumPy
+np.arange(6)    → 0 1 2 3 4 5
+.reshape(3,2)   → 3 rows × 2 columns
+.reshape(1,-1)  → 1 row, automatically determine columns
+Pandas
+data.shape                 → rows, columns
+data.head()                → first 5 rows
+data.iloc[:, 1:2]          → all rows, column position 1 as DataFrame
+data.drop('price', axis=1) → remove column
+
+Regression
+LinearRegression()            → linear numerical prediction
+PolynomialFeatures(degree=5)  → create polynomial features
+fit()                         → learn
+predict()                     → predict
+
+
+#part 3
+import cv2
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.preprocessing import RobustScaler
+import numpy as np
+
+img = cv2.imread('D:\\img.jpg', 0)
+
+#TYPES OF FEATURE SCALING
+# 1. STANDARDIZATION Mean ≈ 0, std ≈ 1
+# 2. MinMaxScaler Usually maps to 0-1
+mx = MinMaxScaler()
+img3 = mx.fit_transform(img)
+
+img4 = img / 255 # gives:  0 → 1
+#ROBUST SCALER    Uses median/IQR; handles outliers better
+rb = RobustScaler()
+img5 = rb.fit_transform(img)
+
+arr = np.arange(6).reshape(3,2)
+
+# polynomial
+from sklearn.preprocessing import PolynomialFeatures
+
+po = PolynomialFeatures(degree=2)
+new_fea = po.fit_transform(arr) #y = aX² + bX + c
+
+# pandas -> integer positions.
+data = pd.read_csv('D:\\Datasets\\data.csv')
+
+X = data.iloc[:,1:2]
+y = data.iloc[:,2]
+
+
+lr = LinearRegression()
+lr.fit(X,y)
+pr = lr.predict(X)
+
+# Scatter = dots plot
+plt.scatter(X,y,color='red')
+plt.plot(X,pr,color='blue')
+
+# Polynomial Regression
+poly = PolynomialFeatures(degree=5)
+X_poly = poly.fit_transform(X)
+
+lr2 = LinearRegression()
+lr2.fit(X_poly, y)
+
+pr2 = lr2.predict(X_poly)
+plt.scatter(X,y,color='red')
+plt.plot(X,pr2,color='blue')
+
+plt.plot(X, pr2)
+
+85
+
+
